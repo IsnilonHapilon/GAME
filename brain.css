@@ -1,0 +1,108 @@
+ 
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.6);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+ 
+h1, h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 50px;
+    color: #6cb8ff;
+    text-align: center;
+    text-shadow: 
+        1px 1px 0 #000,
+        3px 3px 0 #222,
+        4px 4px 0 #444,
+        6px 6px 0 #666,
+        10px 10px 0 #383232;
+    margin-bottom: 20px;
+    display: inline-block;
+    white-space: nowrap;  
+    position: relative;
+}
+
+ 
+h1 span, h2 span {
+    display: inline-block;
+    animation: pulse 3s ease-in-out infinite; 
+    animation-delay: calc(var(--i) * 0.1s);  
+    animation-fill-mode: forwards; 
+}
+
+ 
+h3 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    color: #6cb8ff;
+    text-align: center;
+    text-shadow: 
+        1px 1px 0 #000,
+        2px 2px 0 #222,
+        3px 3px 0 #444,
+        4px 4px 0 #666,
+        5px 5px 0 #383232;
+    margin-top: 40px;
+}
+
+ 
+.pixel-button {
+    background: #1d4f7e;
+    border: 10px solid #272727;
+    color: rgb(213, 242, 243);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 30px 50px;
+    margin: 15px;
+    box-shadow: 0 25px 0 #121724;
+    border-radius: 25px;
+    text-align: center;
+    text-shadow: 
+        1px 1px 0 #000,
+        2px 2px 0 #222,
+        3px 3px 0 #3f4149,
+        4px 4px 0 #504c66;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+    transform: perspective(1500px) rotateX(50deg);  
+
+    
+}
+
+ 
+.pixel-button:hover {
+    transform: perspective(500px) rotateX(0deg) scale(1.2);  
+    box-shadow: 0 15px 10px rgba(25, 38, 48, 0.5);
+    opacity: 0.9;
+}
+
+ 
+.pixel-button:focus {
+    outline: none;
+}
+
+ 
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('computer.gif') no-repeat center center;
+    background-size: cover; 
+    font-family: Arial, sans-serif;
+}

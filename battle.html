@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRAINIAC's BONANZA - Battle</title>
+    <link rel="stylesheet" href="battle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="battle-container">
+        <div id="player-info">
+            <h3 id="player-name">Student</h3>
+            <p>HP: <span id="player-hp">100</span></p>
+            <div class="health-bar" id="player-health-bar">
+                <div class="health-fill" id="player-health-fill"></div>
+            </div>
+        </div>
+
+        <div id="opponent-info">
+            <h3 id="opponent-name">Prof("nagbibigay ng 5")</h3>
+            <p>HP: <span id="opponent-hp">100</span></p>
+            <div class="health-bar" id="opponent-health-bar">
+                <div class="health-fill" id="opponent-health-fill"></div>
+            </div>
+        </div>
+
+        <div id="player-sprite">
+            <img src="Player.png" alt="Player">
+        </div>
+
+        <div id="opponent-sprite">
+            <img src="Opponent.png" alt="Opponent">
+        </div>
+
+        <div id="question-container">
+            <h4 id="question">Question will appear here...</h4>
+        </div>
+
+        <div id="choices">
+            <button class="pixel-button" id="choiceA"></button>
+            <button class="pixel-button" id="choiceB"></button>
+            <button class="pixel-button" id="choiceC"></button>
+            <button class="pixel-button" id="choiceD"></button>
+        </div>
+
+        <div id="result"></div>
+    </div>
+
+   
+    <div id="menu-container">
+        <button class="pixel-button" id="return-button" onclick="returnToMainMenu()">RETURN</button>
+    </div>
+
+    <script src="battle.js"></script>
+    <script>
+       
+        function returnToMainMenu() {
+            window.location.href = "brain.html"; 
+        }
+    </script>
+</body>
+</html>
